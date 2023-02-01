@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:perrybot/app/styles/fonts.dart';
+import 'package:perrybot/app/ui_helpers.dart';
+import 'package:perrybot/core/constants/constants.dart';
 
 import '../../color/colors.dart';
 
@@ -9,19 +12,21 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [Color(0xffFFFB9E), Color(0xfffee1), Color(0xfffee1)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter)),
+      padding: EdgeInsets.symmetric(
+          vertical: screenHeight(context) * 0.06,
+          horizontal: screenWidth(context) * 0.04),
+      decoration: new BoxDecoration(
+          gradient: new LinearGradient(colors: [
+        Color.fromRGBO(248, 249, 136, 1),
+        Color.fromRGBO(248, 249, 136, 0)
+      ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Image.asset(
-                "assets/images/perrybot/logo.png",
+                AppAsset.logo,
                 height: 19,
                 width: 19,
               ),
@@ -34,7 +39,7 @@ class Home extends StatelessWidget {
               ),
               const Spacer(),
               Image.asset(
-                "assets/images/perrybot/activities.png",
+                AppAsset.activities,
                 height: 18,
                 width: 18,
               ),
@@ -43,7 +48,7 @@ class Home extends StatelessWidget {
               ),
               GestureDetector(
                 child: Image.asset(
-                  "assets/images/perrybot/notification.png",
+                  AppAsset.notification,
                   height: 18,
                   width: 18,
                 ),
@@ -56,7 +61,7 @@ class Home extends StatelessWidget {
               ),
               GestureDetector(
                 child: Image.asset(
-                  "assets/images/perrybot/profile.png",
+                  AppAsset.profile,
                   height: 18,
                   width: 18,
                 ),
@@ -126,7 +131,7 @@ class Home extends StatelessWidget {
                   ),
                   const Spacer(),
                   Image.asset(
-                    "assets/images/perrybot/academyplay.png",
+                    AppAsset.academyPlay,
                     height: 50,
                     width: 50,
                   )
@@ -142,10 +147,9 @@ class Home extends StatelessWidget {
           ),
           Row(
             children: [
-              Text(
+              TextSemiBold(
                 "upcoming_event".tr,
-                style:
-                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                fontWeight: FontWeight.w700,
               ),
               const Spacer(),
               Container(
@@ -161,7 +165,7 @@ class Home extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Image.asset(
-                      "assets/images/perrybot/seenewevents.png",
+                      AppAsset.seeNewEvents,
                       width: 15,
                       height: 15,
                     ),
@@ -187,7 +191,7 @@ class Home extends StatelessWidget {
             child: Row(
               children: [
                 Image.asset(
-                  "assets/images/perrybot/bananabootcamp.png",
+                  AppAsset.bananabootcamp,
                   height: 59,
                   width: 59,
                 ),
@@ -266,7 +270,7 @@ class Home extends StatelessWidget {
               Column(
                 children: [
                   Image.asset(
-                    "assets/images/perrybot/quickactioninvest.png",
+                    AppAsset.quickToActionInvest,
                     height: 34,
                     width: 34,
                   ),

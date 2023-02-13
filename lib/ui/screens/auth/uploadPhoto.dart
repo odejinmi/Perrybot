@@ -8,6 +8,8 @@ import 'package:perrybot/ui/page/home.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
+import 'package:perrybot/ui/screens/mainpage.dart';
+
 class UploadPhoto extends StatefulWidget {
   const UploadPhoto({super.key});
 
@@ -98,7 +100,7 @@ class _UploadPhotoState extends State<UploadPhoto> {
                               onTap: _openImagePicker,
                               child: Container(
                                 alignment: Alignment.center,
-                                child: Icon(
+                                child: const Icon(
                                   Icons.camera_alt_outlined,
                                   color: PerryColors.white,
                                 ),
@@ -114,18 +116,18 @@ class _UploadPhotoState extends State<UploadPhoto> {
                           borderRadius: BorderRadius.circular(10),
                           width: screenWidth(context) * 0.36,
                           title: "done".tr,
-                          color: Color(0xffFFFDF2),
+                          color: const Color(0xffFFFDF2),
                           onTap: (() {
-                            Get.to(Home());
+                            Get.to(const Mainpage());
                           })),
                       Gap(screenHeight(context) * 0.045),
                       BusyButton(
                           borderRadius: BorderRadius.circular(10),
                           width: screenWidth(context) * 0.36,
                           title: "Skip for now".tr,
-                          color: Color(0xffFFFDF2),
+                          color: const Color(0xffFFFDF2),
                           onTap: (() {
-                            Get.to(Home());
+                            Get.to(const Mainpage());
                           })),
                     ],
                   ),

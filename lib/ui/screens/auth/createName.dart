@@ -5,6 +5,7 @@ import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/core/core.dart';
 import 'package:get/get.dart';
+import 'package:perrybot/ui/screens/auth/uploadPhoto.dart';
 
 class CreateName extends StatelessWidget {
   const CreateName({super.key});
@@ -164,7 +165,7 @@ class CreateName extends StatelessWidget {
                           //     ? false
                           //     : true,
                           onTap: (() {
-                            Get.toNamed("/otp");
+                            Get.to(const UploadPhoto());
                           })),
                     ],
                   ),

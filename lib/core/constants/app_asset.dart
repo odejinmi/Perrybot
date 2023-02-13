@@ -9,4 +9,10 @@ class AppAsset {
       "assets/images/perrybot/bananabootcamp.png";
   static const String quickToActionInvest =
       "assets/images/perrybot/quickactioninvest.png";
+  static const String perryLogo = "assets/images/perrybot/perryLogo.svg";
+  static const String onboard1 = "assets/images/perrybot/onboard1.svg";
+  static const String facebook = "assets/images/perrybot/facebook.svg";
+  static const String apple = "assets/images/perrybot/apple.svg";
+  static const String google = "assets/images/perrybot/google.svg";
+  static const String closeIcon = "assets/images/perrybot/close.svg";
 }

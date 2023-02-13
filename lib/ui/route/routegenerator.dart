@@ -3,18 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/ui/screens/about.dart';
 import 'package:perrybot/ui/screens/account.dart';
-import 'package:perrybot/ui/screens/createaccount.dart';
-import 'package:perrybot/ui/screens/createpassword.dart';
+import 'package:perrybot/ui/screens/auth/createaccount.dart';
+import 'package:perrybot/ui/screens/auth/createpassword.dart';
 import 'package:perrybot/ui/screens/editprofile.dart';
 import 'package:perrybot/ui/screens/mainpage.dart';
 import 'package:perrybot/ui/screens/notification.dart';
-import 'package:perrybot/ui/screens/otp.dart';
+import 'package:perrybot/ui/screens/onboarding/splash.dart';
+import 'package:perrybot/ui/screens/auth/otp.dart';
 import 'package:perrybot/ui/screens/payment.dart';
 import 'package:perrybot/ui/screens/security.dart';
 import 'package:perrybot/ui/screens/settings.dart';
 
 import '../screens/academy.dart';
-import '../screens/signin.dart';
+import '../screens/auth/signin.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -22,7 +23,10 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return GetPageRoute(
-          page: () => Mainpage(),
+          page: () => const SplashScreen(),
+          // case '/':
+          //   return GetPageRoute(
+          //     page: () => Mainpage(),
           // binding: BindingsBuilder(() {
           //   Get.lazyPut(() => SplashscreenController());
           // })

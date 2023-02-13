@@ -1,36 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:get/get.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/core/core.dart';
-import 'package:perrybot/ui/screens/auth/createName.dart';
+import 'package:get/get.dart';
 
-import '../../../color/colors.dart';
-
-class Createpassword extends StatefulWidget {
-  const Createpassword({Key? key}) : super(key: key);
-
-  @override
-  State<Createpassword> createState() => _CreatepasswordState();
-}
-
-class _CreatepasswordState extends State<Createpassword> {
-  final TextEditingController confirmPasswordController =
-      TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-
-  //password visbility
-  bool _passwordVisible = true;
-  bool _passwordVisible2 = true;
-
-  @override
-  void initState() {
-    super.initState();
-    _passwordVisible = true;
-    _passwordVisible2 = true;
-  }
+class CreateName extends StatelessWidget {
+  const CreateName({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,24 +53,65 @@ class _CreatepasswordState extends State<Createpassword> {
                           )
                         ],
                       ),
-                      Gap(screenHeight(context) * 0.1),
+                      Gap(screenHeight(context) * 0.2),
                       TextBold(
-                        "create_password".tr,
+                        "Please tell us your name".tr,
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         textAlign: TextAlign.center,
                       ),
                       Gap(screenHeight(context) * 0.02),
-                      TextSemiBold(
-                        "must_contain_a_special_character_and_camel_case".tr,
-                        color: PerryColors.primaryBlue,
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 2),
+                        decoration: BoxDecoration(
+                            color: Color(0xffFFFDF2),
+                            border: Border.all(color: const Color(0xffC4C4C4)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(10))),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "full_name".tr,
+                              style: const TextStyle(
+                                  fontSize: 12, color: Color(0xff171E21)),
+                            ),
+                            TextFormField(
+                              // obscureText: obscureText,
+                              // controller: controller,
+                              decoration: const InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Goodluck",
+                                hintStyle: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff263238)),
+                              ),
+                              style: const TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0xff263238)),
+                              keyboardType: TextInputType.emailAddress,
+                              onChanged: (v) {},
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return "This field can't be empty";
+                                }
+                                return null;
+                              },
+                            )
+                          ],
+                        ),
                       ),
                       SizedBox(height: screenHeight(context) * 0.025),
                       Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 5),
                         decoration: BoxDecoration(
-                            color: const Color(0x69fbf7f7),
+                            color: Color(0xffFFFDF2),
                             border: Border.all(color: const Color(0xffC4C4C4)),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(10))),
@@ -101,30 +119,21 @@ class _CreatepasswordState extends State<Createpassword> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "create_password".tr,
+                              "last_name".tr,
                               style: const TextStyle(
                                   fontSize: 12, color: Color(0xff171E21)),
                             ),
                             TextFormField(
-                              obscureText: _passwordVisible,
-                              obscuringCharacter: '*',
-                              decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: "......",
-                                  hintStyle: const TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color(0xff263238)),
-                                  suffixIcon: TouchableOpacity(
-                                      onTap: (() {
-                                        setState(() {
-                                          _passwordVisible = !_passwordVisible;
-                                        });
-                                      }),
-                                      child: _passwordVisible
-                                          ? const Icon(Icons.visibility)
-                                          : const Icon(
-                                              Icons.visibility_off_outlined))),
+                              obscureText: true,
+                              // controller: controller,
+                              decoration: const InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Allen",
+                                hintStyle: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff263238)),
+                              ),
                               style: const TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
@@ -135,76 +144,8 @@ class _CreatepasswordState extends State<Createpassword> {
                                 if (value!.isEmpty) {
                                   return "This field can't be empty";
                                 }
-
-                                return null;
-                              },
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "confirm_password".tr,
-                          textAlign: TextAlign.left,
-                          style: const TextStyle(
-                              color: Color(0xff263238),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 15, vertical: 5),
-                        decoration: BoxDecoration(
-                            color: const Color(0x69fbf7f7),
-                            border: Border.all(color: const Color(0xffC4C4C4)),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(10))),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "repeat_password".tr,
-                              style: const TextStyle(
-                                  fontSize: 12, color: Color(0xff171E21)),
-                            ),
-                            TextFormField(
-                              obscureText: _passwordVisible2,
-                              obscuringCharacter: '*',
-                              decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: "......",
-                                  hintStyle: const TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color(0xff263238)),
-                                  suffixIcon: TouchableOpacity(
-                                      onTap: (() {
-                                        setState(() {
-                                          _passwordVisible2 =
-                                              !_passwordVisible2;
-                                        });
-                                      }),
-                                      child: _passwordVisible2
-                                          ? const Icon(Icons.visibility)
-                                          : const Icon(
-                                              Icons.visibility_off_outlined))),
-                              style: const TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0xff263238)),
-                              keyboardType: TextInputType.emailAddress,
-                              onChanged: (v) {},
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return "This field can't be empty";
+                                if (!GetUtils.isEmail(value)) {
+                                  return "Email is Invalid";
                                 }
 
                                 return null;
@@ -213,7 +154,7 @@ class _CreatepasswordState extends State<Createpassword> {
                           ],
                         ),
                       ),
-                      Gap(screenHeight(context) * 0.08),
+                      SizedBox(height: screenHeight(context) * 0.08),
                       BusyButton(
                           width: screenWidth(context) * 0.36,
                           title: "done".tr,
@@ -223,24 +164,8 @@ class _CreatepasswordState extends State<Createpassword> {
                           //     ? false
                           //     : true,
                           onTap: (() {
-                            Get.to(CreateName());
+                            Get.toNamed("/otp");
                           })),
-                      Gap(screenHeight(context) * 0.05),
-                      Column(
-                        children: [
-                          TextBold(
-                            'Don’t have an account?',
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
-                          ),
-                          TouchableOpacity(
-                              child: TextBold(
-                            'Sign in',
-                            fontSize: 18,
-                            color: PerryColors.primaryBlue,
-                          ))
-                        ],
-                      )
                     ],
                   ),
                 ),

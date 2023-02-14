@@ -11,6 +11,7 @@ import 'package:perrybot/ui/screens/notification.dart';
 import 'package:perrybot/ui/screens/onboarding/splash.dart';
 import 'package:perrybot/ui/screens/auth/otp.dart';
 import 'package:perrybot/ui/screens/payment.dart';
+import 'package:perrybot/ui/screens/realEstate/realEstate.dart';
 import 'package:perrybot/ui/screens/security.dart';
 import 'package:perrybot/ui/screens/settings.dart';
 
@@ -55,6 +56,8 @@ class RouteGenerator {
         return GetPageRoute(page: () => const Otp());
       case '/createpassword':
         return GetPageRoute(page: () => const Createpassword());
+      case '/realEstate':
+        return GetPageRoute(page: () => const RealEstate());
 
       // case '/privacypolicy':
       //   if (Preferences.init().privacyPolicy) {

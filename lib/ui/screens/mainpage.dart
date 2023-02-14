@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/controller/mainpagecontroller.dart';
+import 'package:perrybot/ui/screens/affilates/affiliates.dart';
+import 'package:perrybot/ui/screens/events/events.dart';
+import 'package:perrybot/ui/screens/realEstate/realEstate.dart';
 
 import '../../color/colors.dart';
 import '../page/home.dart';
@@ -12,8 +15,14 @@ class Mainpage extends GetView<Mainpagecontroller> {
   Widget build(BuildContext context) {
     Get.put(Mainpagecontroller());
     return GetX<Mainpagecontroller>(builder: (controller) {
+      final tabs = [
+        const Home(),
+        const RealEstate(),
+        const Affilates(),
+        const Events()
+      ];
       return Scaffold(
-        body: const Home(),
+        body: tabs[controller.page.value],
         bottomNavigationBar: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           color: controller.page == 2

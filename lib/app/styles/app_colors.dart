@@ -5,6 +5,13 @@ class PerryColors {
   static const Color textColor = Color(0XFF000E3B);
   static const Color notificationBackground = Color(0xffF7F7F7);
   static const Color darkTone = Color(0xff1A1A25);
+  static Color buttonInactive = const Color(0xffffffff).withOpacity(0.3);
+  static const Color primaryYellow = Color(0xffF8F988);
+  static const Color white = Color(0xffFFFFFF);
+  static const Color secondaryYellow = Color(0xffEFEFB4);
+  static const Color primaryBlue = Color(0xff0671E0);
+  static const Color primaryPink = Color(0xffFF7CCB);
+  static const Color faded = Color(0xff455764);
 
   static const Map<int, Color> colorScratch = {
     50: Color.fromRGBO(201, 255, 0, .1),

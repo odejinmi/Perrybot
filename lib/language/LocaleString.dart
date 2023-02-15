@@ -39,6 +39,7 @@ class LocaleString extends Translations {
               "Enter your email address and phone number",
           "email_address": "Email Address",
           "full_name": "Full name",
+          "last_name": "Last name",
           "insert_code": "Insert Code",
           "invest": "Invest",
           "login_settings": "Login Settings",

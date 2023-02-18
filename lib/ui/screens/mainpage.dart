@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/controller/mainpagecontroller.dart';
+import 'package:perrybot/ui/screens/affilates/affiliateHome.dart';
 import 'package:perrybot/ui/screens/affilates/affiliates.dart';
 import 'package:perrybot/ui/screens/events/events.dart';
 import 'package:perrybot/ui/screens/realEstate/realEstate.dart';
@@ -18,7 +19,7 @@ class Mainpage extends GetView<Mainpagecontroller> {
       final tabs = [
         const Home(),
         const RealEstate(),
-        const Affilates(),
+        const AffiliateHome(),
         const Events()
       ];
       return Scaffold(

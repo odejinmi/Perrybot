@@ -80,7 +80,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                         fontWeight: FontWeight.w700,
                         textAlign: TextAlign.center,
                       ),
-                      SvgPicture.asset(AppAsset.onboard1),
+                      Image.asset(AppAsset.onboard1),
                       TextBold(
                         'Perry Makes Real Estate Investment affordable & Easy for under represented communities.',
                         textAlign: TextAlign.center,
@@ -152,7 +152,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                         fontWeight: FontWeight.w700,
                         textAlign: TextAlign.center,
                       ),
-                      SvgPicture.asset(AppAsset.onboard1),
+                      Image.asset(AppAsset.onboard2),
                       TextBold(
                         'Learn About Real Estate Investments and other Financial Literacy education programs on Perry Academy.',
                         textAlign: TextAlign.center,
@@ -225,7 +225,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                         fontWeight: FontWeight.w700,
                         textAlign: TextAlign.center,
                       ),
-                      SvgPicture.asset(AppAsset.onboard1),
+                      Image.asset(AppAsset.onboard1),
                       TextBold(
                         'Get paid when you introduce others to the Perry Cooperative Financial Opportunities.',
                         textAlign: TextAlign.center,

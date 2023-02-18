@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/ui/screens/about.dart';
 import 'package:perrybot/ui/screens/account.dart';
+import 'package:perrybot/ui/screens/affilates/affiliateHome.dart';
 import 'package:perrybot/ui/screens/auth/createaccount.dart';
 import 'package:perrybot/ui/screens/auth/createpassword.dart';
 import 'package:perrybot/ui/screens/editprofile.dart';
@@ -22,12 +23,12 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     dynamic args = settings.arguments;
     switch (settings.name) {
+      // case '/':
+      //   return GetPageRoute(
+      //     page: () => const SplashScreen(),
       case '/':
         return GetPageRoute(
-          page: () => const SplashScreen(),
-          // case '/':
-          //   return GetPageRoute(
-          //     page: () => Mainpage(),
+          page: () => Mainpage(),
           // binding: BindingsBuilder(() {
           //   Get.lazyPut(() => SplashscreenController());
           // })
@@ -58,6 +59,8 @@ class RouteGenerator {
         return GetPageRoute(page: () => const Createpassword());
       case '/realEstate':
         return GetPageRoute(page: () => const RealEstate());
+      case '/affiliateHome':
+        return GetPageRoute(page: () => const AffiliateHome());
 
       // case '/privacypolicy':
       //   if (Preferences.init().privacyPolicy) {

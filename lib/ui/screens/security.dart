@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:perrybot/app/styles/fonts.dart';
 
 import '../component/backarrow.dart';
 
@@ -9,11 +10,14 @@ class Security extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF1F6FA),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
-        leading: const Backarrow(color: Color(0xffFF7CCB)),
-        leadingWidth: 30,
+        leading: const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Backarrow(color: Color(0xffFF7CCB)),
+        ),
         title: Text(
           "security".tr,
           style: const TextStyle(
@@ -22,27 +26,39 @@ class Security extends StatelessWidget {
               color: Color(0xff000E3B)),
         ),
         actions: const [
-          Icon(
-            Icons.security,
-            color: Color(0xffF83C22),
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(
+              Icons.security,
+              color: Color(0xffF83C22),
+            ),
           ),
         ],
       ),
       body: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               height: 10,
             ),
-            Text("login_settings".tr),
+            TextBold(
+              "login_settings".tr,
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+            ),
             item("email_address".tr, "June Allen"),
             item("phone_number".tr, "June Allen"),
             item("password".tr, "********"),
             SizedBox(
               height: 15,
             ),
-            Text("quick_login_and_transaction".tr),
+            TextBold(
+              "quick_login_and_transaction".tr,
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+            ),
             item("4_digit_pin".tr, "********"),
             Container(
               width: Get.width,
@@ -52,7 +68,6 @@ class Security extends StatelessWidget {
                   color: Color(0xffEBEBEB),
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.fingerprint),
                   SizedBox(

@@ -17,8 +17,8 @@ class Home extends StatelessWidget {
           horizontal: screenWidth(context) * 0.04),
       decoration: new BoxDecoration(
           gradient: new LinearGradient(colors: [
-        Color.fromRGBO(248, 249, 136, 1),
-        Color.fromRGBO(248, 249, 136, 0)
+        const Color.fromRGBO(248, 249, 136, 1),
+        const Color.fromRGBO(248, 249, 136, 0)
       ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,8 +179,8 @@ class Home extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            margin: const EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               gradient: LinearGradient(
@@ -220,17 +220,17 @@ class Home extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          child: const Text(
-                            "Crypto",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 8),
-                          ),
                           decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10))),
                           padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 3),
+                          child: const Text(
+                            "Crypto",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 8),
+                          ),
                         ),
                         const SizedBox(
                           width: 10,
@@ -255,14 +255,14 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
             "quick_actions".tr,
             style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -274,13 +274,13 @@ class Home extends StatelessWidget {
                     height: 34,
                     width: 34,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text("invest".tr)
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Column(
@@ -290,7 +290,7 @@ class Home extends StatelessWidget {
                     height: 34,
                     width: 34,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text("affiliates".tr)

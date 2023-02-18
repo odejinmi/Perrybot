@@ -10,27 +10,33 @@ class Editprofile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF1F6FA),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
-        leading: const Backarrow(color: Color(0xffFF7CCB)),
-        leadingWidth: 30,
+        leading: const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Backarrow(color: Color(0xffFF7CCB)),
+        ),
         title: Text(
-          "settings".tr,
+          "Edit Profile".tr,
           style: const TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 18,
               color: Color(0xff000E3B)),
         ),
         actions: [
-          Icon(
-            Icons.settings,
-            color: AppColor.primary_blue,
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Icon(
+              Icons.settings,
+              color: AppColor.primary_blue,
+            ),
           )
         ],
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

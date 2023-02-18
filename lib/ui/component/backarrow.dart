@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:perrybot/app/widgets/touchable_opacity.dart';
 
 class Backarrow extends StatelessWidget {
   final Color color;
@@ -7,14 +8,16 @@ class Backarrow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return TouchableOpacity(
       child: Container(
         decoration: BoxDecoration(color: color, shape: BoxShape.circle),
         alignment: Alignment.center,
-        child: const Icon(
-          Icons.arrow_back_ios,
-          size: 15,
-          color: Colors.white,
+        child: const Center(
+          child: Icon(
+            Icons.arrow_back_ios,
+            size: 20,
+            color: Colors.white,
+          ),
         ),
       ),
       onTap: () {

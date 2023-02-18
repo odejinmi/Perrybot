@@ -10,11 +10,15 @@ class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF1F6FA),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffF1F6FA),
         elevation: 0,
-        leading: const Backarrow(color: Color(0xffFF7CCB)),
-        leadingWidth: 30,
+        leading: const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Backarrow(color: Color(0xffFF7CCB)),
+        ),
+        // leadingWidth: 30,
         title: Text(
           "account".tr,
           style: const TextStyle(
@@ -23,32 +27,27 @@ class Account extends StatelessWidget {
               color: Color(0xff000E3B)),
         ),
         actions: [
-          Container(
-            height: 24,
-            width: 24,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle, color: Color(0xff2255F8)),
-            child: const Icon(
-              Icons.play_arrow,
-              size: 15,
-              color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(
+              Icons.settings,
+              color: AppColor.primary_blue,
             ),
           )
         ],
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           children: [
             SizedBox(
               height: 10,
             ),
-            item("full_name".tr, "June Allen"),
             Container(
               padding: EdgeInsets.symmetric(vertical: 20),
               width: Get.width,
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Color(0xffFFFFFF),
                   borderRadius: BorderRadius.all(Radius.circular(20))),
               child: Column(
                 children: [

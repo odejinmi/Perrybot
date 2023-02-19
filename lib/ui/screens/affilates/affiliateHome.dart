@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:get/instance_manager.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/core/core.dart';
+import 'package:get/get.dart';
+import 'package:perrybot/ui/screens/affilates/ranks.dart';
 
 class AffiliateHome extends StatelessWidget {
   const AffiliateHome({super.key});
@@ -22,13 +25,17 @@ class AffiliateHome extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  child: BackButton(
+                  width: screenWidth(context) * 0.1,
+                  decoration: const BoxDecoration(
+                      color: PerryColors.primaryPink, shape: BoxShape.circle),
+                  child: const BackButton(
                     color: PerryColors.white,
                   ),
                 ),
-                Center(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -68,14 +75,18 @@ class AffiliateHome extends StatelessWidget {
                               title: "Become an Affiliate",
                               width: screenWidth(context) * 0.6,
                               color: PerryColors.secondaryYellow,
-                              onTap: (() {})),
+                              onTap: (() {
+                                Get.to(const AffiliateRanks());
+                              })),
                           Gap(screenHeight(context) * 0.03),
                           BusyButton(
                               title: "See Ranks",
                               width: screenWidth(context) * 0.6,
                               textColor: PerryColors.white,
                               color: PerryColors.primaryBlue,
-                              onTap: (() {})),
+                              onTap: (() {
+                                Get.to(const AffiliateRanks());
+                              })),
                         ],
                       )
                     ],

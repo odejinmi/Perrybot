@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:perrybot/ui/screens/about.dart';
 import 'package:perrybot/ui/screens/account.dart';
 import 'package:perrybot/ui/screens/affilates/affiliateHome.dart';
+import 'package:perrybot/ui/screens/affilates/ranks.dart';
 import 'package:perrybot/ui/screens/auth/createaccount.dart';
 import 'package:perrybot/ui/screens/auth/createpassword.dart';
 import 'package:perrybot/ui/screens/editprofile.dart';
@@ -61,6 +62,8 @@ class RouteGenerator {
         return GetPageRoute(page: () => const RealEstate());
       case '/affiliateHome':
         return GetPageRoute(page: () => const AffiliateHome());
+      case '/affiliateRanks':
+        return GetPageRoute(page: () => const AffiliateRanks());
 
       // case '/privacypolicy':
       //   if (Preferences.init().privacyPolicy) {

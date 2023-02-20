@@ -35,4 +35,5 @@ class AppAsset {
       "assets/images/perrybot/onboardImage2.png";
   static const String mastercard = "assets/images/perrybot/master_card.svg";
   static const String affiliateBg = "assets/images/perrybot/AffiliateHome.png";
+  static const String bluePlay = "assets/images/perrybot/blueplay.png";
 }

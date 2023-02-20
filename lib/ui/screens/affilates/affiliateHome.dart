@@ -31,171 +31,176 @@ class _AffiliateHomeState extends State<AffiliateHome> {
     showModalBottomSheet(
         elevation: 10,
         enableDrag: true,
+        isScrollControlled: true,
         backgroundColor: PerryColors.milk,
         context: ctx,
-        builder: (ctx) => Container(
-              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 28),
-              child: ListView(
-                clipBehavior: Clip.hardEdge,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextBold(
-                        "Connect Payout Wallet",
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                        color: PerryColors.tintedBlack,
-                      ),
-                      TouchableOpacity(
-                        onTap: () {
-                          Get.back();
-                        },
-                        child: TextSemiBold(
-                          "Cancel",
+        builder: (ctx) => Wrap(children: [
+              Container(
+                height: screenHeight(context) * 0.7,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 18, vertical: 28),
+                child: ListView(
+                  clipBehavior: Clip.hardEdge,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextBold(
+                          "Connect Payout Wallet",
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          color: PerryColors.tintedBlack,
+                        ),
+                        TouchableOpacity(
+                          onTap: () {
+                            Get.back();
+                          },
+                          child: TextSemiBold(
+                            "Cancel",
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: PerryColors.faded,
+                          ),
+                        )
+                      ],
+                    ),
+                    Gap(screenHeight(context) * 0.06),
+                    Column(
+                      children: [
+                        TextBold(
+                          "Payout Destination",
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          color: const Color(0xff212D33),
+                        ),
+                        Gap(screenHeight(context) * 0.01),
+                        TextSemiBold(
+                          "Insert a USDT wallet or Bank details",
                           fontSize: 14,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w400,
                           color: PerryColors.faded,
                         ),
-                      )
-                    ],
-                  ),
-                  Gap(screenHeight(context) * 0.06),
-                  Column(
-                    children: [
-                      TextBold(
-                        "Payout Destination",
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xff212D33),
-                      ),
-                      Gap(screenHeight(context) * 0.01),
-                      TextSemiBold(
-                        "Insert a USDT wallet or Bank details",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: PerryColors.faded,
-                      ),
-                      Gap(screenHeight(context) * 0.001),
-                      TextSemiBold(
-                        "Learn more",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: PerryColors.primaryBlue,
-                      ),
-                      Gap(screenHeight(context) * 0.04),
-                      Form(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextSemiBold(
-                            "Bank Details",
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            textAlign: TextAlign.left,
-                            color: PerryColors.primaryBlue,
-                          ),
-                          Gap(screenHeight(context) * 0.007),
-                          TouchableOpacity(
-                            onTap: (() {
-                              showToast();
-                              print('hidden object');
-                            }),
-                            child: TextFormField(
+                        Gap(screenHeight(context) * 0.001),
+                        TextSemiBold(
+                          "Learn more",
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: PerryColors.primaryBlue,
+                        ),
+                        Gap(screenHeight(context) * 0.04),
+                        Form(
+                            child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            TextSemiBold(
+                              "Bank Details",
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              textAlign: TextAlign.left,
+                              color: PerryColors.primaryBlue,
+                            ),
+                            Gap(screenHeight(context) * 0.007),
+                            TouchableOpacity(
+                              onTap: (() {
+                                showToast();
+                                print('hidden object');
+                              }),
+                              child: TextFormField(
+                                enableInteractiveSelection: false,
+                                decoration: InputDecoration(
+                                  fillColor: PerryColors.ash,
+                                  filled: true,
+                                  enabled: false,
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: const BorderSide(
+                                          width: 1, color: Color(0xffC4C4C4))),
+                                  hintText: 'Enter Bank details',
+                                ),
+                              ),
+                            ),
+                            Visibility(
+                              visible: _isVisible,
+                              child: const BankDetails(),
+                            )
+                          ],
+                        )),
+                        Gap(screenHeight(context) * 0.03),
+                        TextSemiBold(
+                          "OR",
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        Gap(screenHeight(context) * 0.03),
+                        Form(
+                            child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            TextSemiBold(
+                              "USDT Wallet",
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              textAlign: TextAlign.left,
+                              color: PerryColors.primaryBlue,
+                            ),
+                            Gap(screenHeight(context) * 0.007),
+                            TextFormField(
                               enableInteractiveSelection: false,
                               decoration: InputDecoration(
                                 fillColor: PerryColors.ash,
-                                filled: true,
                                 enabled: false,
+                                filled: true,
+                                suffixIcon: const Icon(Icons.arrow_drop_down),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(10),
                                     borderSide: const BorderSide(
                                         width: 1, color: Color(0xffC4C4C4))),
-                                hintText: 'Enter Bank details',
+                                hintText: 'Select a USDT network',
                               ),
                             ),
-                          ),
-                          Visibility(
-                            visible: _isVisible,
-                            child: const BankDetails(),
-                          )
-                        ],
-                      )),
-                      Gap(screenHeight(context) * 0.03),
-                      TextSemiBold(
-                        "OR",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
-                      Gap(screenHeight(context) * 0.03),
-                      Form(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextSemiBold(
-                            "USDT Wallet",
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            textAlign: TextAlign.left,
-                            color: PerryColors.primaryBlue,
-                          ),
-                          Gap(screenHeight(context) * 0.007),
-                          TextFormField(
-                            enableInteractiveSelection: false,
-                            decoration: InputDecoration(
-                              fillColor: PerryColors.ash,
-                              enabled: false,
-                              filled: true,
-                              suffixIcon: const Icon(Icons.arrow_drop_down),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: const BorderSide(
-                                      width: 1, color: Color(0xffC4C4C4))),
-                              hintText: 'Select a USDT network',
+                            SizedBox(height: screenHeight(context) * 0.09),
+                            Center(
+                              child: BusyButton(
+                                  title: "Proceed",
+                                  width: 126,
+                                  color: PerryColors.primaryPink,
+                                  onTap: (() {})),
                             ),
-                          ),
-                          SizedBox(height: screenHeight(context) * 0.09),
-                          Center(
-                            child: BusyButton(
-                                title: "Proceed",
-                                width: 126,
-                                color: PerryColors.primaryPink,
-                                onTap: (() {})),
-                          ),
-                          SizedBox(height: screenHeight(context) * 0.009),
-                        ],
-                      )),
-                    ],
-                  ),
-                  TextSemiBold(
-                    "Note:",
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    textAlign: TextAlign.center,
-                    color: PerryColors.faded,
-                  ),
-                  RichText(
-                    overflow: TextOverflow.clip,
-                    softWrap: true,
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                      text: 'Payout is at a minimum of',
-                      style: TextStyle(
-                          color: PerryColors.faded,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 14),
-                      children: <TextSpan>[
-                        TextSpan(
-                            text: '\$20',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: PerryColors.primaryBlue)),
+                            SizedBox(height: screenHeight(context) * 0.009),
+                          ],
+                        )),
                       ],
                     ),
-                  )
-                ],
+                    TextSemiBold(
+                      "Note:",
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      textAlign: TextAlign.center,
+                      color: PerryColors.faded,
+                    ),
+                    RichText(
+                      overflow: TextOverflow.clip,
+                      softWrap: true,
+                      textAlign: TextAlign.center,
+                      text: const TextSpan(
+                        text: 'Payout is at a minimum of',
+                        style: TextStyle(
+                            color: PerryColors.faded,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14),
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: '\$20',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: PerryColors.primaryBlue)),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ));
+            ]));
   }
 
   @override

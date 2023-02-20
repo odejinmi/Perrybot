@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:get/instance_manager.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/core/core.dart';
+import 'package:get/get.dart';
+import 'package:perrybot/ui/screens/events/registeredEvents.dart';
+import 'package:perrybot/ui/screens/events/widgets/bottomSheet.dart';
 
 class Events extends StatelessWidget {
   const Events({super.key});
@@ -89,34 +93,39 @@ class Events extends StatelessWidget {
                   ),
                 ),
                 Gap(screenHeight(context) * 0.03),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextBold('Registered',
-                        fontSize: 14, fontWeight: FontWeight.w700),
-                    Gap(screenHeight(context) * 0.01),
-                    Row(
-                      children: [
-                        Image.asset(
-                          AppAsset.bananabootcamp,
-                          width: 60,
-                          height: 60,
-                        ),
-                        Gap(screenWidth(context) * 0.02),
-                        Image.asset(
-                          AppAsset.event2,
-                          width: 60,
-                          height: 60,
-                        ),
-                        Gap(screenWidth(context) * 0.02),
-                        Image.asset(
-                          AppAsset.event2,
-                          width: 60,
-                          height: 60,
-                        ),
-                      ],
-                    )
-                  ],
+                TouchableOpacity(
+                  onTap: (() {
+                    Get.to(() => const RegisteredEvents());
+                  }),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextBold('Registered',
+                          fontSize: 14, fontWeight: FontWeight.w700),
+                      Gap(screenHeight(context) * 0.01),
+                      Row(
+                        children: [
+                          Image.asset(
+                            AppAsset.bananabootcamp,
+                            width: 60,
+                            height: 60,
+                          ),
+                          Gap(screenWidth(context) * 0.02),
+                          Image.asset(
+                            AppAsset.event2,
+                            width: 60,
+                            height: 60,
+                          ),
+                          Gap(screenWidth(context) * 0.02),
+                          Image.asset(
+                            AppAsset.event2,
+                            width: 60,
+                            height: 60,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
                 Gap(screenHeight(context) * 0.04),
                 TextSemiBold(
@@ -158,133 +167,136 @@ class Events extends StatelessWidget {
                               ListView(
                                 // shrinkWrap: true,
                                 children: [
-                                  Container(
-                                    // height: screenHeight(context) * 0.3,
-                                    width: double.infinity,
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 10, horizontal: 10),
-                                    decoration: BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(10)),
-                                      gradient: LinearGradient(
-                                          colors: [
-                                            Color(0xffBBB58D).withOpacity(0),
-                                            Color(0xffBBB58D).withOpacity(1)
-                                          ],
-                                          begin: Alignment.centerRight,
-                                          end: Alignment.centerLeft),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Image.asset(
-                                          AppAsset.christmas,
-                                          height: 59,
-                                          width: 59,
-                                        ),
-                                        const SizedBox(
-                                          width: 20,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            const Text(
-                                              "Black Christmas",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w700,
-                                                  fontSize: 14),
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            const Text(
-                                              "19th, August 2023",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
-                                                  fontSize: 12),
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Container(
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                          color: PerryColors
-                                                              .primaryBlue,
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius
-                                                                      .circular(
-                                                                          10))),
-                                                  padding: const EdgeInsets
-                                                          .symmetric(
-                                                      horizontal: 10,
-                                                      vertical: 3),
-                                                  child: const Text(
-                                                    "Online",
-                                                    style: TextStyle(
-                                                        color:
-                                                            PerryColors.white,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 10),
+                                  TouchableOpacity(
+                                    onTap: (() {
+                                      ModalBottomSheet.moreModalBottomSheet(
+                                          context);
+                                      print('nmndfjnjk');
+                                    }),
+                                    child: Container(
+                                      // height: screenHeight(context) * 0.3,
+                                      width: double.infinity,
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 10, horizontal: 10),
+                                      decoration: BoxDecoration(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        gradient: LinearGradient(
+                                            colors: [
+                                              const Color(0xffBBB58D)
+                                                  .withOpacity(0),
+                                              const Color(0xffBBB58D)
+                                                  .withOpacity(1)
+                                            ],
+                                            begin: Alignment.centerRight,
+                                            end: Alignment.centerLeft),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Image.asset(
+                                            AppAsset.christmas,
+                                            height: 59,
+                                            width: 59,
+                                          ),
+                                          const SizedBox(
+                                            width: 20,
+                                          ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              const Text(
+                                                "Black Christmas",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w700,
+                                                    fontSize: 14),
+                                              ),
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                              const Text(
+                                                "19th, August 2023",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontSize: 12),
+                                              ),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    decoration: const BoxDecoration(
+                                                        color: PerryColors
+                                                            .primaryBlue,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10))),
+                                                    padding: const EdgeInsets
+                                                            .symmetric(
+                                                        horizontal: 10,
+                                                        vertical: 3),
+                                                    child: const Text(
+                                                      "Online",
+                                                      style: TextStyle(
+                                                          color:
+                                                              PerryColors.white,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 10),
+                                                    ),
                                                   ),
-                                                ),
-                                                const SizedBox(
-                                                  width: 10,
-                                                ),
-                                                Container(
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                          color: Colors.white,
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius
-                                                                      .circular(
-                                                                          10))),
-                                                  padding: const EdgeInsets
-                                                          .symmetric(
-                                                      horizontal: 10,
-                                                      vertical: 3),
-                                                  child: const Text(
-                                                    "Giveaway",
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 10),
+                                                  const SizedBox(
+                                                    width: 10,
                                                   ),
-                                                ),
-                                                const SizedBox(
-                                                  width: 10,
-                                                ),
-                                                Container(
-                                                  child: const Text(
-                                                    "Investment",
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 10),
+                                                  Container(
+                                                    decoration: const BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10))),
+                                                    padding: const EdgeInsets
+                                                            .symmetric(
+                                                        horizontal: 10,
+                                                        vertical: 3),
+                                                    child: const Text(
+                                                      "Giveaway",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 10),
+                                                    ),
                                                   ),
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                          color: Colors.white,
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius
-                                                                      .circular(
-                                                                          10))),
-                                                  padding: const EdgeInsets
-                                                          .symmetric(
-                                                      horizontal: 10,
-                                                      vertical: 3),
-                                                ),
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ],
+                                                  const SizedBox(
+                                                    width: 10,
+                                                  ),
+                                                  Container(
+                                                    child: const Text(
+                                                      "Investment",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 10),
+                                                    ),
+                                                    decoration: const BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10))),
+                                                    padding: const EdgeInsets
+                                                            .symmetric(
+                                                        horizontal: 10,
+                                                        vertical: 3),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Gap(screenHeight(context) * 0.015),
@@ -294,13 +306,14 @@ class Events extends StatelessWidget {
                                     width: double.infinity,
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 10, horizontal: 10),
-                                    decoration: const BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(10)),
+                                    decoration: BoxDecoration(
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(10)),
                                       gradient: LinearGradient(
                                           colors: [
-                                            Color(0xff7ccb),
-                                            Color(0xffF8DF5F)
+                                            const Color(0xff7ccb)
+                                                .withOpacity(0.3),
+                                            const Color(0xffF8DF5F)
                                           ],
                                           begin: Alignment.centerRight,
                                           end: Alignment.centerLeft),
@@ -439,13 +452,14 @@ class Events extends StatelessWidget {
                                     width: double.infinity,
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 10, horizontal: 10),
-                                    decoration: const BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(10)),
+                                    decoration: BoxDecoration(
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(10)),
                                       gradient: LinearGradient(
                                           colors: [
-                                            Color(0xff7ccb),
-                                            Color(0xffF8DF5F)
+                                            const Color(0xff7ccb)
+                                                .withOpacity(0.3),
+                                            const Color(0xffF8DF5F)
                                           ],
                                           begin: Alignment.centerRight,
                                           end: Alignment.centerLeft),
@@ -580,8 +594,8 @@ class Events extends StatelessWidget {
                                 ],
                               ),
                               //second
-                              Center(child: Text('Tab 2 content')),
-                              Center(child: Text('Tab 3 content')),
+                              const Center(child: Text('Tab 2 content')),
+                              const Center(child: Text('Tab 3 content')),
                             ],
                           ),
                         ),

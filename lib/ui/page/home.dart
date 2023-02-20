@@ -15,10 +15,10 @@ class Home extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           vertical: screenHeight(context) * 0.06,
           horizontal: screenWidth(context) * 0.04),
-      decoration: new BoxDecoration(
-          gradient: new LinearGradient(colors: [
-        const Color.fromRGBO(248, 249, 136, 1),
-        const Color.fromRGBO(248, 249, 136, 0)
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [
+        Color.fromRGBO(248, 249, 136, 1),
+        Color.fromRGBO(248, 249, 136, 0)
       ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +73,7 @@ class Home extends StatelessWidget {
                 width: 10,
               ),
               GestureDetector(
-                child: Icon(
+                child: const Icon(
                   Icons.settings,
                   color: AppColor.faded,
                 ),
@@ -112,7 +112,7 @@ class Home extends StatelessWidget {
                     children: [
                       Text(
                         "academy".tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
                             color: AppColor.faded),
@@ -122,7 +122,7 @@ class Home extends StatelessWidget {
                       ),
                       Text(
                         "continue_learning".tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                             color: AppColor.tinted_black),

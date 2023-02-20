@@ -7,6 +7,7 @@ class BusyButton extends StatelessWidget {
     required this.onTap,
     this.disabled = false,
     this.color = PerryColors.primaryBackground,
+    this.textColor,
     this.borderRadius,
     this.width,
     this.height,
@@ -14,6 +15,7 @@ class BusyButton extends StatelessWidget {
   }) : super(key: key);
   final String title;
   final Color? color;
+  final Color? textColor;
   final double? width;
   final double? height;
   final VoidCallback onTap;
@@ -33,7 +35,7 @@ class BusyButton extends StatelessWidget {
         child: Center(
           child: TextBody(
             title,
-            color: PerryColors.textColor,
+            color: textColor ?? PerryColors.textColor,
             style: const TextStyle(
               decoration: TextDecoration.none,
             ),

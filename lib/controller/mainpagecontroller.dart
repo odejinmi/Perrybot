@@ -7,14 +7,12 @@ class Mainpagecontroller extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     page.value = storage.read("page") ?? 0;
   }
 
   @override
   void onClose() {
-    // TODO: implement onClose
     super.onClose();
   }
 }

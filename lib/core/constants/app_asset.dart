@@ -10,7 +10,9 @@ class AppAsset {
   static const String quickToActionInvest =
       "assets/images/perrybot/quickactioninvest.png";
   static const String perryLogo = "assets/images/perrybot/perryLogo.svg";
-  static const String onboard1 = "assets/images/perrybot/onboard1.svg";
+  static const String onboard1 = "assets/images/perrybot/onboard1.png";
+  static const String onboard2 = "assets/images/perrybot/onboard3.png";
+  static const String onboard3 = "assets/images/perrybot/onboard2.png";
   static const String facebook = "assets/images/perrybot/facebook.svg";
   static const String apple = "assets/images/perrybot/apple.svg";
   static const String google = "assets/images/perrybot/google.svg";
@@ -26,4 +28,15 @@ class AppAsset {
   static const String halfMoon = "assets/images/perrybot/half-moon.svg";
   static const String houseInvestments =
       "assets/images/perrybot/house-investments.png";
+  static const String event2 = "assets/images/perrybot/event2.png";
+  static const String christmas = "assets/images/perrybot/christmas.png";
+  static const String greenTick = "assets/images/perrybot/green_tick.png";
+  static const String onboardImage2 =
+      "assets/images/perrybot/onboardImage2.png";
+  static const String mastercard = "assets/images/perrybot/master_card.svg";
+  static const String affiliateBg = "assets/images/perrybot/AffiliateHome.png";
+  static const String bluePlay = "assets/images/perrybot/blueplay.png";
+  static const String yellowTick = "assets/images/perrybot/yellowTick.png";
+  static const String houseFill = "assets/images/perrybot/house-fill.svg";
+  static const String usersHand = "assets/images/perrybot/users.svg";
 }

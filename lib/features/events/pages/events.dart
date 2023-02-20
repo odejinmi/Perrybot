@@ -5,7 +5,7 @@ import 'package:get/instance_manager.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/core/core.dart';
 import 'package:get/get.dart';
-import 'package:perrybot/features/events/registeredEvents.dart';
+import 'package:perrybot/features/events/pages/registeredEvents.dart';
 import 'package:perrybot/features/events/widgets/bottomSheet.dart';
 
 class Events extends StatelessWidget {

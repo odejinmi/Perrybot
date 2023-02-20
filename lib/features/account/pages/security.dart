@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/app/styles/fonts.dart';
 
-import '../app/widgets/backarrow.dart';
+import '../../../app/widgets/backarrow.dart';
 
 class Security extends StatelessWidget {
   const Security({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/color/colors.dart';
 
-import '../app/widgets/backarrow.dart';
+import '../../../app/widgets/backarrow.dart';
 
 class Account extends StatelessWidget {
   const Account({Key? key}) : super(key: key);

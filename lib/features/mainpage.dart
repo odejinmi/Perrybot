@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/controller/mainpagecontroller.dart';
-import 'package:perrybot/features/affilates/affiliateHome.dart';
-import 'package:perrybot/features/affilates/affiliates.dart';
-import 'package:perrybot/features/events/events.dart';
+import 'package:perrybot/features/affilates/pages/affiliateHome.dart';
+import 'package:perrybot/features/affilates/pages/affiliates.dart';
+import 'package:perrybot/features/events/pages/events.dart';
 import 'package:perrybot/features/realEstate/realEstate.dart';
 
 import '../color/colors.dart';

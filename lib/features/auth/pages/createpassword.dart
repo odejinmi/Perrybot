@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/core/core.dart';
-import 'package:perrybot/features/auth/createName.dart';
+import 'package:perrybot/features/auth/pages/createName.dart';
 
-import '../../color/colors.dart';
+import '../../../color/colors.dart';
 
 class Createpassword extends StatefulWidget {
   const Createpassword({Key? key}) : super(key: key);

@@ -5,7 +5,7 @@ import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/core/core.dart';
 import 'package:get/get.dart';
-import 'package:perrybot/features/auth/uploadPhoto.dart';
+import 'package:perrybot/features/auth/pages/uploadPhoto.dart';
 
 class CreateName extends StatelessWidget {
   const CreateName({super.key});

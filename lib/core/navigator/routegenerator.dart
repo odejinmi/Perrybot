@@ -2,23 +2,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/features/about.dart';
-import 'package:perrybot/features/account.dart';
-import 'package:perrybot/features/affilates/affiliateHome.dart';
-import 'package:perrybot/features/affilates/ranks.dart';
-import 'package:perrybot/features/auth/createaccount.dart';
-import 'package:perrybot/features/auth/createpassword.dart';
-import 'package:perrybot/features/editprofile.dart';
+import 'package:perrybot/features/account/pages/account.dart';
+import 'package:perrybot/features/affilates/pages/affiliateHome.dart';
+import 'package:perrybot/features/affilates/pages/ranks.dart';
+import 'package:perrybot/features/auth/pages/createaccount.dart';
+import 'package:perrybot/features/auth/pages/createpassword.dart';
+import 'package:perrybot/features/account/pages/editprofile.dart';
 import 'package:perrybot/features/mainpage.dart';
 import 'package:perrybot/features/notifications/pages/notification.dart';
-import 'package:perrybot/features/onboarding/splash.dart';
-import 'package:perrybot/features/auth/otp.dart';
-import 'package:perrybot/features/payment.dart';
+import 'package:perrybot/features/onboarding/pages/splash.dart';
+import 'package:perrybot/features/auth/pages/otp.dart';
+import 'package:perrybot/features/account/pages/payment.dart';
 import 'package:perrybot/features/realEstate/realEstate.dart';
-import 'package:perrybot/features/security.dart';
-import 'package:perrybot/features/settings.dart';
+import 'package:perrybot/features/account/pages/security.dart';
+import 'package:perrybot/features/account/pages/settings.dart';
 
 import '../../features/academy.dart';
-import '../../features/auth/signin.dart';
+import '../../features/auth/pages/signin.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

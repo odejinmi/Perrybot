@@ -9,7 +9,7 @@ import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/color/colors.dart';
 import 'package:perrybot/core/constants/constants.dart';
 
-import '../app/widgets/backarrow.dart';
+import '../../../app/widgets/backarrow.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/core/core.dart';
 
-import '../../color/colors.dart';
+import '../../../color/colors.dart';
 
 class Otp extends StatelessWidget {
   const Otp({Key? key}) : super(key: key);

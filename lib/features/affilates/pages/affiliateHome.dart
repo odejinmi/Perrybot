@@ -8,8 +8,8 @@ import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/core/core.dart';
 import 'package:get/get.dart';
-import 'package:perrybot/features/affilates/bankDetails.dart';
-import 'package:perrybot/features/affilates/ranks.dart';
+import 'package:perrybot/features/affilates/pages/bankDetails.dart';
+import 'package:perrybot/features/affilates/pages/ranks.dart';
 
 class AffiliateHome extends StatefulWidget {
   const AffiliateHome({super.key});

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:perrybot/app/styles/styles.dart';
 
-import '../color/colors.dart';
-import '../app/widgets/backarrow.dart';
+import '../../../color/colors.dart';
+import '../../../app/widgets/backarrow.dart';
 
 class Editprofile extends StatelessWidget {
   const Editprofile({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class Editprofile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF1F6FA),
+      backgroundColor: const Color(0xffF1F6FA),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -26,8 +27,8 @@ class Editprofile extends StatelessWidget {
               color: Color(0xff000E3B)),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
+          const Padding(
+            padding: EdgeInsets.all(10.0),
             child: Icon(
               Icons.settings,
               color: AppColor.primary_blue,
@@ -51,7 +52,7 @@ class Editprofile extends StatelessWidget {
                     width: 84,
                     height: 84,
                   ),
-                  Center(
+                  const Center(
                     child: Icon(
                       Icons.camera_alt,
                       color: AppColor.yellow,
@@ -64,10 +65,8 @@ class Editprofile extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text(
-              "basic_info",
-              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
-            ),
+            TextSemiBold("basic_info".tr,
+                fontWeight: FontWeight.w700, fontSize: 14),
             const SizedBox(
               height: 20,
             ),
@@ -80,17 +79,18 @@ class Editprofile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  TextSemiBold(
                     "full_name".tr,
-                    style: const TextStyle(
-                        fontSize: 10, fontWeight: FontWeight.w600),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w600,
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text(
+                  TextSemiBold(
                     "June Allen",
-                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500,
                   ),
                 ],
               ),

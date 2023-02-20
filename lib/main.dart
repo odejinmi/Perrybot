@@ -4,7 +4,7 @@ import 'package:get_storage/get_storage.dart';
 
 import 'controller/networkcontroller.dart';
 import 'language/LocaleString.dart';
-import 'ui/route/routegenerator.dart';
+import 'core/navigator/routegenerator.dart';
 
 Future<void> main() async {
   await GetStorage.init();

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:perrybot/app/styles/fonts.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/core/constants/constants.dart';
@@ -63,18 +62,18 @@ class _HomeState extends State<Home> {
               children: [
                 Row(
                   children: [
-                    Image.asset(
-                      AppAsset.logo,
-                      height: 19,
+                    SvgPicture.asset(
+                      AppAsset.perryLogo,
                       width: 19,
+                      height: 19,
                     ),
                     const SizedBox(
                       width: 5,
                     ),
-                    const Text(
+                    TextBold(
                       "Perry",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                      style: const TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w500),
                     ),
                     const Spacer(),
                     Image.asset(
@@ -128,7 +127,7 @@ class _HomeState extends State<Home> {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
+                TextSemiBold(
                   "welcome".tr,
                   style: const TextStyle(
                       fontSize: 14, fontWeight: FontWeight.w700),
@@ -154,22 +153,20 @@ class _HomeState extends State<Home> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            TextBold(
                               "academy".tr,
-                              style: const TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: AppColor.faded),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: PerryColors.faded,
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            Text(
+                            TextSemiBold(
                               "continue_learning".tr,
-                              style: const TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColor.tinted_black),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: PerryColors.tintedBlack,
                             ),
                           ],
                         ),
@@ -216,7 +213,11 @@ class _HomeState extends State<Home> {
                           const SizedBox(
                             width: 10,
                           ),
-                          Text("see_new_events".tr),
+                          TextSmall(
+                            "see_new_events".tr,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ],
                       ),
                     )
@@ -246,18 +247,18 @@ class _HomeState extends State<Home> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
+                          TextSemiBold(
                             "Banana Bootcamp",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700, fontSize: 14),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
                           ),
                           const SizedBox(
                             height: 5,
                           ),
-                          const Text(
+                          TextSemiBold(
                             "19th, August 2023",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 12),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
                           ),
                           const SizedBox(
                             height: 10,
@@ -303,10 +304,10 @@ class _HomeState extends State<Home> {
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
+                TextSemiBold(
                   "quick_actions".tr,
-                  style: const TextStyle(
-                      fontSize: 14, fontWeight: FontWeight.w700),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
                 ),
                 const SizedBox(
                   height: 20,
@@ -323,7 +324,11 @@ class _HomeState extends State<Home> {
                         const SizedBox(
                           height: 10,
                         ),
-                        Text("invest".tr)
+                        TextSemiBold(
+                          "invest".tr,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        )
                       ],
                     ),
                     const SizedBox(
@@ -339,7 +344,11 @@ class _HomeState extends State<Home> {
                         const SizedBox(
                           height: 10,
                         ),
-                        Text("affiliates".tr)
+                        TextSemiBold(
+                          "affiliates".tr,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        )
                       ],
                     ),
                   ],

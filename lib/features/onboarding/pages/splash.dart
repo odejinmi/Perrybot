@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 import 'package:perrybot/core/core.dart';
 import 'package:get/get.dart';
-import 'package:perrybot/features/onboarding/introduction.dart';
+import 'package:perrybot/features/onboarding/pages/introduction.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

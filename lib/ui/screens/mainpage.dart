@@ -7,7 +7,7 @@ import 'package:perrybot/ui/screens/events/events.dart';
 import 'package:perrybot/ui/screens/realEstate/realEstate.dart';
 
 import '../../color/colors.dart';
-import '../page/home.dart';
+import 'homepage/page/home.dart';
 
 class Mainpage extends GetView<Mainpagecontroller> {
   const Mainpage({Key? key}) : super(key: key);

@@ -161,7 +161,8 @@ class Events extends StatelessWidget {
                           ],
                         ),
                         // ignore: prefer_const_constructors
-                        Expanded(
+                        Flexible(
+                          fit: FlexFit.tight,
                           child: TabBarView(
                             children: [
                               ListView(
@@ -171,7 +172,6 @@ class Events extends StatelessWidget {
                                     onTap: (() {
                                       ModalBottomSheet.moreModalBottomSheet(
                                           context);
-                                      print('nmndfjnjk');
                                     }),
                                     child: Container(
                                       // height: screenHeight(context) * 0.3,
@@ -184,7 +184,7 @@ class Events extends StatelessWidget {
                                         gradient: LinearGradient(
                                             colors: [
                                               const Color(0xffBBB58D)
-                                                  .withOpacity(0),
+                                                  .withOpacity(0.3),
                                               const Color(0xffBBB58D)
                                                   .withOpacity(1)
                                             ],
@@ -301,148 +301,155 @@ class Events extends StatelessWidget {
                                   ),
                                   Gap(screenHeight(context) * 0.015),
                                   //second card
-                                  Container(
-                                    // height: screenHeight(context) * 0.3,
-                                    width: double.infinity,
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 10, horizontal: 10),
-                                    decoration: BoxDecoration(
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(10)),
-                                      gradient: LinearGradient(
-                                          colors: [
-                                            const Color(0xff7ccb)
-                                                .withOpacity(0.3),
-                                            const Color(0xffF8DF5F)
-                                          ],
-                                          begin: Alignment.centerRight,
-                                          end: Alignment.centerLeft),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Image.asset(
-                                          AppAsset.bananabootcamp,
-                                          height: 59,
-                                          width: 59,
-                                        ),
-                                        const SizedBox(
-                                          width: 20,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                const Text(
-                                                  "Banana Bootcamp",
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      fontSize: 14),
+                                  TouchableOpacity(
+                                    onTap: (() {
+                                      ModalBottomSheet
+                                          .registeredEventModalBottomSheet(
+                                              context);
+                                    }),
+                                    child: Container(
+                                      // height: screenHeight(context) * 0.3,
+                                      width: double.infinity,
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 10, horizontal: 10),
+                                      decoration: BoxDecoration(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        gradient: LinearGradient(
+                                            colors: [
+                                              const Color(0x00ff7ccb)
+                                                  .withOpacity(0.3),
+                                              const Color(0xffF8DF5F)
+                                            ],
+                                            begin: Alignment.centerRight,
+                                            end: Alignment.centerLeft),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Image.asset(
+                                            AppAsset.bananabootcamp,
+                                            height: 59,
+                                            width: 59,
+                                          ),
+                                          const SizedBox(
+                                            width: 20,
+                                          ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              SizedBox(
+                                                width:
+                                                    screenWidth(context) * 0.6,
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    const Text(
+                                                      "Banana Bootcamp",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          fontSize: 14),
+                                                    ),
+                                                    Image.asset(
+                                                      AppAsset.greenTick,
+                                                      width: 18,
+                                                      height: 18,
+                                                    )
+                                                  ],
                                                 ),
-                                                Image.asset(
-                                                  AppAsset.greenTick,
-                                                  width: 18,
-                                                  height: 18,
-                                                )
-                                              ],
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            const Text(
-                                              "19th, August 2023",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
-                                                  fontSize: 12),
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Container(
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                          color: Colors.black,
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius
-                                                                      .circular(
-                                                                          10))),
-                                                  padding: const EdgeInsets
-                                                          .symmetric(
-                                                      horizontal: 10,
-                                                      vertical: 3),
-                                                  child: const Text(
-                                                    "Live",
-                                                    style: TextStyle(
-                                                        color:
-                                                            PerryColors.white,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 10),
+                                              ),
+                                              const SizedBox(
+                                                height: 5,
+                                              ),
+                                              const Text(
+                                                "19th, August 2023",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontSize: 12),
+                                              ),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    decoration: const BoxDecoration(
+                                                        color: Colors.black,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10))),
+                                                    padding: const EdgeInsets
+                                                            .symmetric(
+                                                        horizontal: 10,
+                                                        vertical: 3),
+                                                    child: const Text(
+                                                      "Live",
+                                                      style: TextStyle(
+                                                          color:
+                                                              PerryColors.white,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 10),
+                                                    ),
                                                   ),
-                                                ),
-                                                const SizedBox(
-                                                  width: 10,
-                                                ),
-                                                Container(
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                          color: Colors.white,
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius
-                                                                      .circular(
-                                                                          10))),
-                                                  padding: const EdgeInsets
-                                                          .symmetric(
-                                                      horizontal: 10,
-                                                      vertical: 3),
-                                                  child: const Text(
-                                                    "Crypto",
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 10),
+                                                  const SizedBox(
+                                                    width: 10,
                                                   ),
-                                                ),
-                                                const SizedBox(
-                                                  width: 10,
-                                                ),
-                                                Container(
-                                                  child: const Text(
-                                                    "Real estate",
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 10),
+                                                  Container(
+                                                    decoration: const BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10))),
+                                                    padding: const EdgeInsets
+                                                            .symmetric(
+                                                        horizontal: 10,
+                                                        vertical: 3),
+                                                    child: const Text(
+                                                      "Crypto",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 10),
+                                                    ),
                                                   ),
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                          color: Colors.white,
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius
-                                                                      .circular(
-                                                                          10))),
-                                                  padding: const EdgeInsets
-                                                          .symmetric(
-                                                      horizontal: 10,
-                                                      vertical: 3),
-                                                ),
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ],
+                                                  const SizedBox(
+                                                    width: 10,
+                                                  ),
+                                                  Container(
+                                                    child: const Text(
+                                                      "Real estate",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 10),
+                                                    ),
+                                                    decoration: const BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10))),
+                                                    padding: const EdgeInsets
+                                                            .symmetric(
+                                                        horizontal: 10,
+                                                        vertical: 3),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Gap(screenHeight(context) * 0.015),
@@ -479,25 +486,30 @@ class Events extends StatelessWidget {
                                         Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                const Text(
-                                                  "Banana Bootcamp",
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      fontSize: 14),
-                                                ),
-                                                Image.asset(
-                                                  AppAsset.greenTick,
-                                                  width: 18,
-                                                  height: 18,
-                                                )
-                                              ],
+                                            SizedBox(
+                                              width: screenWidth(context) * 0.6,
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  const Text(
+                                                    "Banana Bootcamp",
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                        fontSize: 14),
+                                                  ),
+                                                  Image.asset(
+                                                    AppAsset.greenTick,
+                                                    width: 18,
+                                                    height: 18,
+                                                  )
+                                                ],
+                                              ),
                                             ),
                                             const SizedBox(
                                               height: 5,

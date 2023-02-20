@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/core/core.dart';
-import 'package:perrybot/ui/page/home.dart';
+import 'package:perrybot/ui/screens/homepage/page/home.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 

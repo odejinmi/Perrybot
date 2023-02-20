@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.transparent,
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

@@ -24,12 +24,12 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     dynamic args = settings.arguments;
     switch (settings.name) {
-      // case '/':
-      //   return GetPageRoute(
-      //     page: () => const SplashScreen(),
       case '/':
         return GetPageRoute(
-          page: () => Mainpage(),
+          page: () => const SplashScreen(),
+          // case '/':
+          //   return GetPageRoute(
+          //     page: () => Mainpage(),
           // binding: BindingsBuilder(() {
           //   Get.lazyPut(() => SplashscreenController());
           // })

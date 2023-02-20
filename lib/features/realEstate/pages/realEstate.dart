@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/app/widgets/touchable_opacity.dart';
 import 'package:perrybot/core/core.dart';
+import 'package:perrybot/features/realEstate/pages/singleInvestment.dart';
 
 class RealEstate extends StatelessWidget {
   const RealEstate({super.key});
@@ -315,76 +317,81 @@ class RealEstate extends StatelessWidget {
                       ],
                     ),
                     Gap(screenHeight(context) * 0.03),
-                    Container(
-                      width: double.infinity,
-                      height: screenHeight(context) * 0.13,
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 15),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        gradient: LinearGradient(colors: [
-                          const Color(0xff9E6AE0).withOpacity(0.35),
-                          const Color(0xffA07E65).withOpacity(1),
-                        ], begin: Alignment.topLeft, end: Alignment.topRight),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextBold(
-                                'Jamine 4 Bedroom Flat. Boston',
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                              ),
-                              TextSemiBold(
-                                'Ashford, Spain',
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              Row(
-                                children: [
-                                  Pills(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 7, horizontal: 10),
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          color: const Color(0xffFFFDF2)),
-                                      child: Row(
-                                        children: [
-                                          TextSemiBold('15'),
-                                          Gap(screenWidth(context) * 0.01),
-                                          SvgPicture.asset(AppAsset.halfMoon)
-                                        ],
-                                      )),
-                                  Gap(screenWidth(context) * 0.02),
-                                  Pills(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 7, horizontal: 10),
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          color: const Color(0xffFFFDF2)),
-                                      child: Row(
-                                        children: [
-                                          TextSemiBold('Buy & Rent'),
-                                          Gap(screenWidth(context) * 0.01),
-                                          SvgPicture.asset(AppAsset.bag)
-                                        ],
-                                      )),
-                                ],
-                              )
-                            ],
-                          ),
-                          Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Image.asset(AppAsset.houseInvestments))
-                        ],
+                    TouchableOpacity(
+                      onTap: (() {
+                        Get.to(const SingleInvestment());
+                      }),
+                      child: Container(
+                        width: double.infinity,
+                        height: screenHeight(context) * 0.13,
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          gradient: LinearGradient(colors: [
+                            const Color(0xff9E6AE0).withOpacity(0.35),
+                            const Color(0xffA07E65).withOpacity(1),
+                          ], begin: Alignment.topLeft, end: Alignment.topRight),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextBold(
+                                  'Jamine 4 Bedroom Flat. Boston',
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                TextSemiBold(
+                                  'Ashford, Spain',
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                Row(
+                                  children: [
+                                    Pills(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 7, horizontal: 10),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: const Color(0xffFFFDF2)),
+                                        child: Row(
+                                          children: [
+                                            TextSemiBold('15'),
+                                            Gap(screenWidth(context) * 0.01),
+                                            SvgPicture.asset(AppAsset.halfMoon)
+                                          ],
+                                        )),
+                                    Gap(screenWidth(context) * 0.02),
+                                    Pills(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 7, horizontal: 10),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: const Color(0xffFFFDF2)),
+                                        child: Row(
+                                          children: [
+                                            TextSemiBold('Buy & Rent'),
+                                            Gap(screenWidth(context) * 0.01),
+                                            SvgPicture.asset(AppAsset.bag)
+                                          ],
+                                        )),
+                                  ],
+                                )
+                              ],
+                            ),
+                            Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Image.asset(AppAsset.houseInvestments))
+                          ],
+                        ),
                       ),
                     ),
                     Gap(screenHeight(context) * 0.016),

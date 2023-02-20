@@ -4,7 +4,7 @@ import 'package:perrybot/controller/mainpagecontroller.dart';
 import 'package:perrybot/features/affilates/pages/affiliateHome.dart';
 import 'package:perrybot/features/affilates/pages/affiliates.dart';
 import 'package:perrybot/features/events/pages/events.dart';
-import 'package:perrybot/features/realEstate/realEstate.dart';
+import 'package:perrybot/features/realEstate/pages/realEstate.dart';
 
 import '../color/colors.dart';
 import 'homepage/page/home.dart';

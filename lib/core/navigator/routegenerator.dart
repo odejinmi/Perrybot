@@ -13,7 +13,7 @@ import 'package:perrybot/features/notifications/pages/notification.dart';
 import 'package:perrybot/features/onboarding/pages/splash.dart';
 import 'package:perrybot/features/auth/pages/otp.dart';
 import 'package:perrybot/features/account/pages/payment.dart';
-import 'package:perrybot/features/realEstate/realEstate.dart';
+import 'package:perrybot/features/realEstate/pages/realEstate.dart';
 import 'package:perrybot/features/account/pages/security.dart';
 import 'package:perrybot/features/account/pages/settings.dart';
 
@@ -24,12 +24,12 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     dynamic args = settings.arguments;
     switch (settings.name) {
+      // case '/':
+      //   return GetPageRoute(
+      //     page: () => const SplashScreen(),
       case '/':
         return GetPageRoute(
-          page: () => const SplashScreen(),
-          // case '/':
-          //   return GetPageRoute(
-          //     page: () => Mainpage(),
+          page: () => Mainpage(),
           // binding: BindingsBuilder(() {
           //   Get.lazyPut(() => SplashscreenController());
           // })

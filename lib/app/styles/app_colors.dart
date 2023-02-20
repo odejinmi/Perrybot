@@ -17,6 +17,7 @@ class PerryColors {
   static const Color tintedBlack = Color(0xff000E3B);
   static const Color milk = Color(0xffFAF6F1);
   static const Color ash = Color(0xffF3FAFC);
+  static const Color primaryPurple = Color(0xffE4C2F4);
 
   static const Map<int, Color> colorScratch = {
     50: Color.fromRGBO(201, 255, 0, .1),

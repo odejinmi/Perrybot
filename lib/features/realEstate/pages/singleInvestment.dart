@@ -9,6 +9,7 @@ import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/app/widgets/backarrow.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/core/core.dart';
+import 'package:perrybot/features/realEstate/widgets/detailsBottomSheet.dart';
 
 class SingleInvestment extends StatefulWidget {
   const SingleInvestment({super.key});
@@ -21,17 +22,6 @@ class _SingleInvestmentState extends State<SingleInvestment> {
   PageController _pageController = PageController(
     initialPage: 0,
   );
-  // List<String> images = [
-  //   "https://images.wallpapersden.com/image/download/purple-sunrise-4k-vaporwave_bGplZmiUmZqaraWkpJRmbmdlrWZlbWU.jpg",
-  //   "https://wallpaperaccess.com/full/2637581.jpg",
-  //   "https://uhdwallpapers.org/uploads/converted/20/01/14/the-mandalorian-5k-1920x1080_477555-mm-90.jpg",
-  // ];
-
-  // final List<String> captions = [
-  //   "Sitting room 1",
-  //   "Sitting room 2",
-  //   "Sitting room 1"
-  // ];
 
   final List<Map> myRooms = [
     {"name": "Settings Room 1", "images": AppAsset.room1, "location": "Room 1"},
@@ -322,6 +312,39 @@ class _SingleInvestmentState extends State<SingleInvestment> {
                   ],
                 ),
               ),
+              const Gap(0.2),
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 12, horizontal: 18),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: PerryColors.secondaryYellow,
+                    borderRadius: BorderRadius.circular(20)),
+                child: TouchableOpacity(
+                  onTap: () {
+                    DetailsBottomSheet.propertyDetailsBottomSheet(context);
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextSmall(
+                        "Property Details",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                        color: PerryColors.faded,
+                      ),
+                      const Icon(
+                        Icons.arrow_forward_ios,
+                        color: PerryColors.faded,
+                        size: 18,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Gap(screenHeight(context) * 0.1),
             ],
           ),
         ),

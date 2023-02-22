@@ -39,4 +39,12 @@ class AppAsset {
   static const String yellowTick = "assets/images/perrybot/yellowTick.png";
   static const String houseFill = "assets/images/perrybot/house-fill.svg";
   static const String usersHand = "assets/images/perrybot/users.svg";
+  static const String room1 = "assets/images/perrybot/room1.png";
+  static const String room2 = "assets/images/perrybot/room2.png";
+  static const String room3 = "assets/images/perrybot/room3.png";
+  static const String room4 = "assets/images/perrybot/room4.png";
+  static const String plant = "assets/images/perrybot/plant.png";
+  static const String message = "assets/images/perrybot/chat.png";
+  static const String chat = "assets/images/perrybot/chat-yellow.png";
+  static const String chatAvatar = "assets/images/perrybot/chat-avatar.png";
 }

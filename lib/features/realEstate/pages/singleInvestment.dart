@@ -9,6 +9,7 @@ import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/app/widgets/backarrow.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/core/core.dart';
+import 'package:perrybot/features/realEstate/pages/chatInvestment.dart';
 import 'package:perrybot/features/realEstate/widgets/detailsBottomSheet.dart';
 
 class SingleInvestment extends StatefulWidget {
@@ -369,23 +370,25 @@ class _SingleInvestmentState extends State<SingleInvestment> {
                       fontWeight: FontWeight.w700,
                       color: PerryColors.primaryBlue,
                     ),
-                    Row(
-                      children: [
-                        TextSemiBold(
-                          "And God said, let there be light and ...",
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: PerryColors.faded,
-                        ),
-                        TouchableOpacity(
-                          onTap: () {},
-                          child: const Icon(
+                    TouchableOpacity(
+                      onTap: (() {
+                        Get.to(() => ChatInvestment());
+                      }),
+                      child: Row(
+                        children: [
+                          TextSemiBold(
+                            "And God said, let there be light and ...",
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: PerryColors.faded,
+                          ),
+                          const Icon(
                             Icons.arrow_forward_ios,
                             color: PerryColors.faded,
                             size: 18,
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),

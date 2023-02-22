@@ -19,6 +19,7 @@ class PerryColors {
   static const Color ash = Color(0xffF3FAFC);
   static const Color primaryPurple = Color(0xffE4C2F4);
   static const Color lightHearted = Color(0xffFFFDF2);
+  static const Color secondaryPurple = Color(0xffC27DE2);
 
   static const Map<int, Color> colorScratch = {
     50: Color.fromRGBO(201, 255, 0, .1),

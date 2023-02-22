@@ -45,4 +45,6 @@ class AppAsset {
   static const String room4 = "assets/images/perrybot/room4.png";
   static const String plant = "assets/images/perrybot/plant.png";
   static const String message = "assets/images/perrybot/chat.png";
+  static const String chat = "assets/images/perrybot/chat-yellow.png";
+  static const String chatAvatar = "assets/images/perrybot/chat-avatar.png";
 }

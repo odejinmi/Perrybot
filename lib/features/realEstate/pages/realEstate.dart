@@ -8,12 +8,14 @@ import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/app/widgets/touchable_opacity.dart';
 import 'package:perrybot/core/core.dart';
 import 'package:perrybot/features/realEstate/pages/singleInvestment.dart';
+import 'package:perrybot/features/realEstate/widgets/investSidepanel.dart';
 
 class RealEstate extends StatelessWidget {
   const RealEstate({super.key});
 
   @override
   Widget build(BuildContext context) {
+    GlobalKey<ScaffoldState> _scaffoldState = GlobalKey<ScaffoldState>();
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
@@ -22,6 +24,7 @@ class RealEstate extends StatelessWidget {
         ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
       ),
       child: Scaffold(
+        key: _scaffoldState,
         backgroundColor: Colors.transparent,
         body: SafeArea(
             child: SingleChildScrollView(
@@ -51,6 +54,9 @@ class RealEstate extends StatelessWidget {
                       ],
                     ),
                     TouchableOpacity(
+                        onTap: (() {
+                          _scaffoldState.currentState!.openEndDrawer();
+                        }),
                         child: SvgPicture.asset(AppAsset.threeDotsMenu))
                   ],
                 ),
@@ -473,6 +479,14 @@ class RealEstate extends StatelessWidget {
             ),
           ),
         )),
+        endDrawer: Container(
+          margin: EdgeInsets.only(top: screenHeight(context) * 0.08),
+          child: const ClipRRect(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  bottomLeft: Radius.circular(15)),
+              child: Drawer(elevation: 1.0, child: InvestSidePANEL())),
+        ),
       ),
     );
   }

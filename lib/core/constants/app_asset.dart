@@ -53,4 +53,6 @@ class AppAsset {
   static const String coinbase = "assets/images/perrybot/coinbase.png";
   static const String binance = "assets/images/perrybot/binance.png";
   static const String connect = "assets/images/perrybot/connect.png";
+  static const String star = "assets/images/perrybot/star.png";
+  static const String greenAvatar = "assets/images/perrybot/green-avatar.png";
 }

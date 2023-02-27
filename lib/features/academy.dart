@@ -15,7 +15,7 @@ class Academy extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: Backarrow(color: Color(0xff2255F8)),
         ),
-        leadingWidth: 50,
+        leadingWidth: 0,
         title: Text(
           "academy".tr,
           style: const TextStyle(

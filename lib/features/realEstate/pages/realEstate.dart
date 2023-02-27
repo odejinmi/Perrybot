@@ -7,6 +7,7 @@ import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/app/widgets/touchable_opacity.dart';
 import 'package:perrybot/core/core.dart';
+import 'package:perrybot/features/realEstate/pages/investmentGroup.dart';
 import 'package:perrybot/features/realEstate/pages/singleInvestment.dart';
 import 'package:perrybot/features/realEstate/widgets/investSidepanel.dart';
 
@@ -61,78 +62,83 @@ class RealEstate extends StatelessWidget {
                   ],
                 ),
                 Gap(screenHeight(context) * 0.03),
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                  height: 110,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: const Color(0xff9747FF),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          TextSemiBold(
-                            'Find investment groups',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: PerryColors.white,
-                          ),
-                          SvgPicture.asset(AppAsset.forwardArrow)
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Pills(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 7, horizontal: 10),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color:
-                                      const Color(0xffFFFDF2).withOpacity(0.5)),
-                              child: Row(
-                                children: [
-                                  TextSemiBold('Buy & Rent'),
-                                  Gap(screenWidth(context) * 0.01),
-                                  SvgPicture.asset(AppAsset.bag)
-                                ],
-                              )),
-                          Gap(screenWidth(context) * 0.015),
-                          Pills(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 7, horizontal: 10),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color:
-                                      const Color(0xffFFFDF2).withOpacity(0.5)),
-                              child: Row(
-                                children: [
-                                  TextSemiBold('Fix & Fill'),
-                                  Gap(screenWidth(context) * 0.01),
-                                  SvgPicture.asset(AppAsset.house)
-                                ],
-                              )),
-                          Gap(screenWidth(context) * 0.015),
-                          Pills(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 7, horizontal: 10),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color:
-                                      const Color(0xffFFFDF2).withOpacity(0.5)),
-                              child: Row(
-                                children: [
-                                  TextSemiBold('AirBnb'),
-                                  Gap(screenWidth(context) * 0.01),
-                                  SvgPicture.asset(AppAsset.airbnb)
-                                ],
-                              )),
-                        ],
-                      )
-                    ],
+                TouchableOpacity(
+                  onTap: (() {
+                    Get.to(InvestmentGroup());
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 20),
+                    height: 110,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: const Color(0xff9747FF),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            TextSemiBold(
+                              'Find investment groups',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: PerryColors.white,
+                            ),
+                            SvgPicture.asset(AppAsset.forwardArrow)
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Pills(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 7, horizontal: 10),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: const Color(0xffFFFDF2)
+                                        .withOpacity(0.5)),
+                                child: Row(
+                                  children: [
+                                    TextSemiBold('Buy & Rent'),
+                                    Gap(screenWidth(context) * 0.01),
+                                    SvgPicture.asset(AppAsset.bag)
+                                  ],
+                                )),
+                            Gap(screenWidth(context) * 0.015),
+                            Pills(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 7, horizontal: 10),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: const Color(0xffFFFDF2)
+                                        .withOpacity(0.5)),
+                                child: Row(
+                                  children: [
+                                    TextSemiBold('Fix & Fill'),
+                                    Gap(screenWidth(context) * 0.01),
+                                    SvgPicture.asset(AppAsset.house)
+                                  ],
+                                )),
+                            Gap(screenWidth(context) * 0.015),
+                            Pills(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 7, horizontal: 10),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: const Color(0xffFFFDF2)
+                                        .withOpacity(0.5)),
+                                child: Row(
+                                  children: [
+                                    TextSemiBold('AirBnb'),
+                                    Gap(screenWidth(context) * 0.01),
+                                    SvgPicture.asset(AppAsset.airbnb)
+                                  ],
+                                )),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 Gap(screenHeight(context) * 0.06),

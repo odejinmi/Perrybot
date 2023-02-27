@@ -1,4 +1,6 @@
 PODS:
+  - click_to_copy (0.0.1):
+    - Flutter
   - connectivity (0.0.1):
     - Flutter
     - Reachability
@@ -10,6 +12,7 @@ PODS:
   - Reachability (3.2)
 
 DEPENDENCIES:
+  - click_to_copy (from `.symlinks/plugins/click_to_copy/ios`)
   - connectivity (from `.symlinks/plugins/connectivity/ios`)
   - Flutter (from `Flutter`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
@@ -20,6 +23,8 @@ SPEC REPOS:
     - Reachability
 
 EXTERNAL SOURCES:
+  click_to_copy:
+    :path: ".symlinks/plugins/click_to_copy/ios"
   connectivity:
     :path: ".symlinks/plugins/connectivity/ios"
   Flutter:
@@ -30,6 +35,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/path_provider_ios/ios"
 
 SPEC CHECKSUMS:
+  click_to_copy: 219d945d70c332e39742419e4717d7649ddcf380
   connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   image_picker_ios: b786a5dcf033a8336a657191401bfdf12017dabb

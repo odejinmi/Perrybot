@@ -11,8 +11,11 @@ class Academy extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: const Backarrow(color: Color(0xff2255F8)),
-        leadingWidth: 30,
+        leading: const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Backarrow(color: Color(0xff2255F8)),
+        ),
+        leadingWidth: 50,
         title: Text(
           "academy".tr,
           style: const TextStyle(
@@ -24,6 +27,7 @@ class Academy extends StatelessWidget {
           Container(
             height: 24,
             width: 24,
+            margin: const EdgeInsets.only(right: 5),
             decoration: const BoxDecoration(
                 shape: BoxShape.circle, color: Color(0xff2255F8)),
             child: const Icon(

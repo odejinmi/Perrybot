@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/styles/styles.dart';
 import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/core/constants/constants.dart';
 import 'package:perrybot/features/homepage/model/activities.dart';
+import 'package:perrybot/features/subscriptions/pages/subscribeNow.dart';
 
 import '../../../color/colors.dart';
 
@@ -314,22 +316,27 @@ class _HomeState extends State<Home> {
                 ),
                 Row(
                   children: [
-                    Column(
-                      children: [
-                        Image.asset(
-                          AppAsset.quickToActionInvest,
-                          height: 34,
-                          width: 34,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        TextSemiBold(
-                          "invest".tr,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        )
-                      ],
+                    TouchableOpacity(
+                      onTap: (() {
+                        Get.to(SubscribeNow());
+                      }),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            AppAsset.quickToActionInvest,
+                            height: 34,
+                            width: 34,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          TextSemiBold(
+                            "invest".tr,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                          )
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       width: 20,

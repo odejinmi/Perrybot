@@ -47,4 +47,10 @@ class AppAsset {
   static const String message = "assets/images/perrybot/chat.png";
   static const String chat = "assets/images/perrybot/chat-yellow.png";
   static const String chatAvatar = "assets/images/perrybot/chat-avatar.png";
+  static const String subscribtionBg =
+      "assets/images/perrybot/subscriptionBg.png";
+  static const String diamondIcon = "assets/images/perrybot/diamondIcon.png";
+  static const String coinbase = "assets/images/perrybot/coinbase.png";
+  static const String binance = "assets/images/perrybot/binance.png";
+  static const String connect = "assets/images/perrybot/connect.png";
 }

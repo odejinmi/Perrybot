@@ -4,10 +4,17 @@ import 'package:gap/gap.dart';
 import 'package:perrybot/app/app.dart';
 import 'package:perrybot/app/ui_helpers.dart';
 import 'package:perrybot/core/core.dart';
+import 'package:perrybot/features/affilates/widgets/sidepanel.dart';
 
-class Affilates extends StatelessWidget {
+class Affilates extends StatefulWidget {
   const Affilates({super.key});
 
+  @override
+  State<Affilates> createState() => _AffilatesState();
+}
+
+class _AffilatesState extends State<Affilates> {
+  GlobalKey<ScaffoldState> _scaffoldState = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,6 +25,7 @@ class Affilates extends StatelessWidget {
         ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
       ),
       child: Scaffold(
+        key: _scaffoldState,
         backgroundColor: Colors.transparent,
         body: SafeArea(
             child: SingleChildScrollView(
@@ -65,6 +73,9 @@ class Affilates extends StatelessWidget {
                           ),
                         ),
                         TouchableOpacity(
+                            onTap: (() {
+                              _scaffoldState.currentState!.openEndDrawer();
+                            }),
                             child: SvgPicture.asset(AppAsset.threeDotsMenu)),
                       ],
                     )
@@ -141,6 +152,14 @@ class Affilates extends StatelessWidget {
             ),
           ),
         )),
+        endDrawer: Container(
+          margin: EdgeInsets.only(top: screenHeight(context) * 0.08),
+          child: const ClipRRect(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  bottomLeft: Radius.circular(15)),
+              child: Drawer(elevation: 1.0, child: AffiliateSidepanel())),
+        ),
       ),
     );
   }

@@ -19,7 +19,7 @@ class Mainpage extends GetView<Mainpagecontroller> {
       final tabs = [
         const Home(),
         const RealEstate(),
-        const AffiliateHome(),
+        const Affilates(),
         const Events()
       ];
       return Scaffold(

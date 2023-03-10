@@ -26,8 +26,8 @@ class APIConfiguration extends StatelessWidget {
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
               child: TextBold(

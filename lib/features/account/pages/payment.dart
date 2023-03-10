@@ -210,8 +210,8 @@ class _PaymentState extends State<Payment> {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [

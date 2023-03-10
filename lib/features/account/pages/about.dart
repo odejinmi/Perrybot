@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/color/colors.dart';
 
-import '../app/widgets/backarrow.dart';
+import '../../../app/widgets/backarrow.dart';
 
 class About extends StatelessWidget {
   const About({Key? key}) : super(key: key);
@@ -36,15 +36,17 @@ class About extends StatelessWidget {
                     AssetImage("assets/images/perrybot/aboutbackground.png"))),
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
+          child: ListView(
             children: [
               SizedBox(
                 height: 30,
               ),
-              Text(
-                "about_details".tr,
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                textAlign: TextAlign.center,
+              Flexible(
+                child: Text(
+                  "about_details".tr,
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  textAlign: TextAlign.center,
+                ),
               )
             ],
           ),

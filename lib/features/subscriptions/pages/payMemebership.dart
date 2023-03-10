@@ -45,8 +45,8 @@ class _PayMembershipState extends State<PayMembership> {
           body: SafeArea(
               child: Padding(
             padding: const EdgeInsets.fromLTRB(15, 25, 15, 0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: ListView(
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Center(
                   child: TextBold(
@@ -58,7 +58,7 @@ class _PayMembershipState extends State<PayMembership> {
                 Gap(screenHeight(context) * 0.04),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 10),
-                  height: screenHeight(context) * 0.22,
+                  // height: screenHeight(context) * 0.22,
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -89,7 +89,7 @@ class _PayMembershipState extends State<PayMembership> {
                 Gap(screenHeight(context) * 0.02),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 10),
-                  height: screenHeight(context) * 0.22,
+                  // height: screenHeight(context) * 0.22,
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),

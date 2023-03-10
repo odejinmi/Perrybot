@@ -335,7 +335,7 @@ class RealEstate extends StatelessWidget {
                       }),
                       child: Container(
                         width: double.infinity,
-                        height: screenHeight(context) * 0.13,
+                        // height: screenHeight(context) * 0.13,
                         padding: const EdgeInsets.symmetric(
                             vertical: 10, horizontal: 15),
                         decoration: BoxDecoration(
@@ -409,7 +409,7 @@ class RealEstate extends StatelessWidget {
                     Gap(screenHeight(context) * 0.016),
                     Container(
                       width: double.infinity,
-                      height: screenHeight(context) * 0.13,
+                      // height: screenHeight(context) * 0.13,
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       decoration: BoxDecoration(

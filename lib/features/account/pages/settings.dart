@@ -18,7 +18,7 @@ class Settings extends StatelessWidget {
                 colors: [Color(0xffFF9E9E), Color(0xff9e9e)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
-        child: Column(
+        child: ListView(
           children: [
             AppBar(
               backgroundColor: Colors.transparent,

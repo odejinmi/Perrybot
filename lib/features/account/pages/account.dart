@@ -38,7 +38,7 @@ class Account extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Column(
+        child: ListView(
           children: [
             SizedBox(
               height: 10,

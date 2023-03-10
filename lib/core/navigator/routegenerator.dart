@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:perrybot/features/about.dart';
+import 'package:perrybot/features/account/pages/about.dart';
 import 'package:perrybot/features/account/pages/account.dart';
 import 'package:perrybot/features/activities/pages/activitiesScreen.dart';
 import 'package:perrybot/features/affilates/pages/affiliateHome.dart';

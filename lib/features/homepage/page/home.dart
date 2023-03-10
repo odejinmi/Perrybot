@@ -51,8 +51,8 @@ class _HomeState extends State<Home> {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
-        Color(0xffFFFB9E).withOpacity(1),
-        Color(0xffFFFEE1).withOpacity(0)
+        const Color(0xffFFFB9E).withOpacity(1),
+        const Color(0xffFFFEE1).withOpacity(0)
       ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -131,294 +131,306 @@ class _HomeState extends State<Home> {
                     )
                   ],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                TextSemiBold(
-                  "welcome".tr,
-                  style: const TextStyle(
-                      fontSize: 14, fontWeight: FontWeight.w700),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                GestureDetector(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 14),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        gradient: LinearGradient(
-                            colors: [
-                              const Color(0xffEBAC00).withOpacity(0.2),
-                              const Color(0xffFF7CCB).withOpacity(0.2)
+                Flexible(
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: [
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextSemiBold(
+                        "welcome".tr,
+                        style: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w700),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      GestureDetector(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 14),
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(10)),
+                              gradient: LinearGradient(
+                                  colors: [
+                                    const Color(0xffEBAC00).withOpacity(0.2),
+                                    const Color(0xffFF7CCB).withOpacity(0.2)
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter)),
+                          child: Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextBold(
+                                    "academy".tr,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    color: PerryColors.faded,
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  TextSemiBold(
+                                    "continue_learning".tr,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: PerryColors.tintedBlack,
+                                  ),
+                                ],
+                              ),
+                              const Spacer(),
+                              Image.asset(
+                                AppAsset.academyPlay,
+                                height: 50,
+                                width: 50,
+                              )
                             ],
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter)),
-                    child: Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          ),
+                        ),
+                        onTap: () {
+                          Get.toNamed("/academy");
+                        },
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          TextSemiBold(
+                            "upcoming_event".tr,
+                            fontWeight: FontWeight.w700,
+                          ),
+                          const Spacer(),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 3),
+                            decoration: const BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                gradient: LinearGradient(
+                                    colors: [
+                                      Color(0xffebac00),
+                                      Color(0xffff7ccb)
+                                    ],
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter)),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Image.asset(
+                                  AppAsset.seeNewEvents,
+                                  width: 15,
+                                  height: 15,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                TextSmall(
+                                  "see_new_events".tr,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                      Container(
+                        margin: const EdgeInsets.symmetric(vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 10),
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          gradient: LinearGradient(
+                              colors: [Color(0x00ff7ccb), Color(0xffF8DF5F)],
+                              begin: Alignment.centerRight,
+                              end: Alignment.centerLeft),
+                        ),
+                        child: Row(
                           children: [
-                            TextBold(
-                              "academy".tr,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700,
-                              color: PerryColors.faded,
+                            Image.asset(
+                              AppAsset.bananabootcamp,
+                              height: 59,
+                              width: 59,
                             ),
                             const SizedBox(
-                              height: 10,
+                              width: 20,
                             ),
-                            TextSemiBold(
-                              "continue_learning".tr,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: PerryColors.tintedBlack,
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TextSemiBold(
+                                  "Banana Bootcamp",
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                TextSemiBold(
+                                  "19th, August 2023",
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      decoration: const BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10))),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10, vertical: 3),
+                                      child: const Text(
+                                        "Crypto",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 8),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Container(
+                                      decoration: const BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10))),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10, vertical: 3),
+                                      child: const Text(
+                                        "Real estate",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 8),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              ],
                             ),
                           ],
                         ),
-                        const Spacer(),
-                        Image.asset(
-                          AppAsset.academyPlay,
-                          height: 50,
-                          width: 50,
-                        )
-                      ],
-                    ),
-                  ),
-                  onTap: () {
-                    Get.toNamed("/academy");
-                  },
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  children: [
-                    TextSemiBold(
-                      "upcoming_event".tr,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    const Spacer(),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 3),
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          gradient: LinearGradient(
-                              colors: [Color(0xffebac00), Color(0xffff7ccb)],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter)),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Image.asset(
-                            AppAsset.seeNewEvents,
-                            width: 15,
-                            height: 15,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          TextSmall(
-                            "see_new_events".tr,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Container(
-                  margin: const EdgeInsets.symmetric(vertical: 10),
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    gradient: LinearGradient(
-                        colors: [Color(0x00ff7ccb), Color(0xffF8DF5F)],
-                        begin: Alignment.centerRight,
-                        end: Alignment.centerLeft),
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        AppAsset.bananabootcamp,
-                        height: 59,
-                        width: 59,
                       ),
                       const SizedBox(
-                        width: 20,
+                        height: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      TextSemiBold(
+                        "quick_actions".tr,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
                         children: [
-                          TextSemiBold(
-                            "Banana Bootcamp",
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          TextSemiBold(
-                            "19th, August 2023",
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                decoration: const BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10))),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 3),
-                                child: const Text(
-                                  "Crypto",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400, fontSize: 8),
+                          TouchableOpacity(
+                            onTap: (() {
+                              Get.to(const SubscribeNow());
+                            }),
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  AppAsset.quickToActionInvest,
+                                  height: 34,
+                                  width: 34,
                                 ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                TextSemiBold(
+                                  "invest".tr,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                )
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Column(
+                            children: [
+                              Image.asset(
+                                "assets/images/perrybot/quickactionaffiliates.png",
+                                height: 34,
+                                width: 34,
                               ),
                               const SizedBox(
-                                width: 10,
+                                height: 10,
                               ),
-                              Container(
-                                decoration: const BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10))),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 3),
-                                child: const Text(
-                                  "Real estate",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400, fontSize: 8),
-                                ),
-                              ),
+                              TextSemiBold(
+                                "affiliates".tr,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              )
                             ],
-                          )
+                          ),
                         ],
+                      ),
+                      Gap(screenHeight(context) * 0.02),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextBold("Activities",
+                              fontSize: 14, fontWeight: FontWeight.w700),
+                          SvgPicture.asset(AppAsset.forwardArrowBlack)
+                        ],
+                      ),
+                      Column(
+                        children: users.map((userone) {
+                          return ListTile(
+                            leading: SvgPicture.asset(
+                              userone.avatar,
+                              width: 40,
+                            ),
+                            title: RichText(
+                              softWrap: true,
+                              maxLines: 2,
+                              text: TextSpan(
+                                text: userone.title,
+                                style: const TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: PerryColors.tintedBlack),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text: userone.amount,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: PerryColors.primaryGreen)),
+                                ],
+                              ),
+                            ),
+                            subtitle: Row(
+                              children: [
+                                TextSemiBold(
+                                  userone.subtitle,
+                                  color: PerryColors.primaryBlue,
+                                  fontSize: 12,
+                                ),
+                                Gap(screenWidth(context) * 0.04),
+                                TextSemiBold(
+                                  userone.time,
+                                  fontSize: 12,
+                                  color: PerryColors.faded,
+                                )
+                              ],
+                            ),
+                          );
+                        }).toList(),
                       ),
                     ],
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                TextSemiBold(
-                  "quick_actions".tr,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  children: [
-                    TouchableOpacity(
-                      onTap: (() {
-                        Get.to(SubscribeNow());
-                      }),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            AppAsset.quickToActionInvest,
-                            height: 34,
-                            width: 34,
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          TextSemiBold(
-                            "invest".tr,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      children: [
-                        Image.asset(
-                          "assets/images/perrybot/quickactionaffiliates.png",
-                          height: 34,
-                          width: 34,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        TextSemiBold(
-                          "affiliates".tr,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-                Gap(screenHeight(context) * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextBold("Activities",
-                        fontSize: 14, fontWeight: FontWeight.w700),
-                    SvgPicture.asset(AppAsset.forwardArrowBlack)
-                  ],
-                ),
-                Flexible(
-                  child: ListView(
-                    children: users.map((userone) {
-                      return ListTile(
-                        leading: SvgPicture.asset(
-                          userone.avatar,
-                          width: 40,
-                        ),
-                        title: RichText(
-                          softWrap: true,
-                          maxLines: 2,
-                          text: TextSpan(
-                            text: userone.title,
-                            style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: PerryColors.tintedBlack),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: userone.amount,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: PerryColors.primaryGreen)),
-                            ],
-                          ),
-                        ),
-                        subtitle: Row(
-                          children: [
-                            TextSemiBold(
-                              userone.subtitle,
-                              color: PerryColors.primaryBlue,
-                              fontSize: 12,
-                            ),
-                            Gap(screenWidth(context) * 0.04),
-                            TextSemiBold(
-                              userone.time,
-                              fontSize: 12,
-                              color: PerryColors.faded,
-                            )
-                          ],
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                ),
+                )
               ],
             ),
           ),

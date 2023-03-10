@@ -35,9 +35,8 @@ class _EventsState extends State<Events> {
           body: SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: ListView(
+                shrinkWrap: true,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -78,10 +78,15 @@ class _HomeState extends State<Home> {
                           fontSize: 18, fontWeight: FontWeight.w500),
                     ),
                     const Spacer(),
-                    Image.asset(
-                      AppAsset.activities,
-                      height: 18,
-                      width: 18,
+                    GestureDetector(
+                      onTap: (() {
+                        Get.toNamed("/activities");
+                      }),
+                      child: Image.asset(
+                        AppAsset.activities,
+                        height: 18,
+                        width: 18,
+                      ),
                     ),
                     const SizedBox(
                       width: 10,

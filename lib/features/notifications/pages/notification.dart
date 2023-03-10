@@ -38,81 +38,126 @@ class Notifications extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
+      body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextSemiBold(
-              "3.45 pm",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
+        children: [
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            decoration: BoxDecoration(
+                color: PerryColors.white,
+                borderRadius: BorderRadius.circular(8)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextSemiBold(
+                  "Today,3.45 pm",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextSemiBold(
+                  "Payment for #3434 Nepa BIll was successfull",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                  color: const Color(0xff6B7A82),
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 10,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            decoration: BoxDecoration(
+                color: PerryColors.white,
+                borderRadius: BorderRadius.circular(8)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextSemiBold(
+                  " Yesterday 3.45 pm",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextSemiBold(
+                  "You sent N100.000 to #Ichie111 successfully",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+              ],
             ),
-            TextSemiBold(
-              "Payment for #3434 Nepa BIll was successfull",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-              color: const Color(0xff6B7A82),
+          ),
+          Gap(screenHeight(context) * 0.04),
+          TextBold(
+            "Last week (9)",
+            fontSize: 12,
+            fontWeight: FontWeight.w600,
+            color: const Color(0xff6B7A82),
+          ),
+          Gap(screenHeight(context) * 0.01),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            decoration: BoxDecoration(
+                color: PerryColors.white,
+                borderRadius: BorderRadius.circular(8)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextSemiBold(
+                  "Friday, 3.45 pm",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextSemiBold(
+                  "Payment for #3434 Nepa BIll was successfull",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                  color: const Color(0xff6B7A82),
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 20,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            decoration: BoxDecoration(
+                color: PerryColors.white,
+                borderRadius: BorderRadius.circular(8)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextSemiBold(
+                  " Yesterday 3.45 pm",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextSemiBold(
+                  "You sent N100.000 to #Ichie111 successfully",
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+              ],
             ),
-            TextSemiBold(
-              " Yesterday 3.45 pm",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextSemiBold(
-              "You sent N100.000 to #Ichie111 successfully",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-            ),
-            Gap(screenHeight(context) * 0.04),
-            TextBold(
-              "Last week (9)",
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-              color: const Color(0xff6B7A82),
-            ),
-            Gap(screenHeight(context) * 0.01),
-            TextSemiBold(
-              "3.45 pm",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextSemiBold(
-              "Payment for #3434 Nepa BIll was successfull",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-              color: const Color(0xff6B7A82),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextSemiBold(
-              " Yesterday 3.45 pm",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextSemiBold(
-              "You sent N100.000 to #Ichie111 successfully",
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

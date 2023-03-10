@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:perrybot/features/about.dart';
 import 'package:perrybot/features/account/pages/account.dart';
+import 'package:perrybot/features/activities/pages/activitiesScreen.dart';
 import 'package:perrybot/features/affilates/pages/affiliateHome.dart';
 import 'package:perrybot/features/affilates/pages/ranks.dart';
 import 'package:perrybot/features/auth/pages/createaccount.dart';
@@ -64,6 +65,8 @@ class RouteGenerator {
         return GetPageRoute(page: () => const AffiliateHome());
       case '/affiliateRanks':
         return GetPageRoute(page: () => const AffiliateRanks());
+      case '/activities':
+        return GetPageRoute(page: () => const ActivitiesScreen());
 
       // case '/privacypolicy':
       //   if (Preferences.init().privacyPolicy) {
